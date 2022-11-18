@@ -21,10 +21,9 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
   // targets currentDay on html
-  var currentDay = $('.currentDay');
+  var currentDay = $('#currentDay');
   // generates the current time
-  var time = dayjs().format('hh:mm:ss');
-  $('#3a').text(time);
+  var time = dayjs().format('hh:mm');
   // appends to page
   currentDay.append(time);
 });
