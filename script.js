@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   saveButton.on("click", function () {
     var textEl = $(this).parent().children(".description").val();
-    var timeEl = $(this).parent().attr("id");
+    var timeEl = $(this).parent().attr("id").slice(5);
     localStorage.setItem(textEl, timeEl);
   })
 // applies present, future, and past colors to calendar slots
@@ -26,10 +26,10 @@ $(document).ready(function () {
 // pulls data out of local storage and appends it to the page
    var desText =$(".description");
 
-   for (var i = 9; i < 20; i++) {
+   for (var i = 9; i < 17; i++) {
     var test = localStorage.getItem([i]);
     if (test !== null) {
-      desText[i-0].value = test;
+      desText[i-9].value = test;
     };
    }
 // appends current date to top of page
