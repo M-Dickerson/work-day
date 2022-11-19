@@ -1,8 +1,5 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 $(document).ready(function () {
-  // * DONE
+// stores any data entered into local storage
   var saveButton = $(".saveBtn");
 
   saveButton.on("click", function () {
@@ -10,7 +7,7 @@ $(document).ready(function () {
     var timeEl = $(this).parent().attr("id");
     localStorage.setItem(textEl, timeEl);
   })
-  // TODO: Add code to apply the past, present, or future class to each time
+// applies present, future, and past colors to calendar slots
   var cTime = dayjs().format("H");
 
   $(".time-block").each(function() {
@@ -26,17 +23,16 @@ $(document).ready(function () {
       $(this).addClass("past");
     }
   });
-  // TODO: Add code to get any user input that was saved in localStorage and set
+// pulls data out of local storage and appends it to the page
    var desText =$(".description");
 
    for (var i = 9; i < 17; i++) {
     var test = localStorage.getItem([i]);
-
     if (test !== null) {
       desText[i-9].vaule = note;
     }
    }
-  // * DONE
+// appends current date to top of page
   // targets currentDay on html
   var currentDay = $('#currentDay');
   // generates the current time
