@@ -26,11 +26,11 @@ $(document).ready(function () {
 // pulls data out of local storage and appends it to the page
    var desText =$(".description");
 
-   for (var i = 9; i < 17; i++) {
+   for (var i = 9; i < 20; i++) {
     var test = localStorage.getItem([i]);
     if (test !== null) {
-      desText[i-9].vaule = note;
-    }
+      desText[i-0].value = test;
+    };
    }
 // appends current date to top of page
   // targets currentDay on html
