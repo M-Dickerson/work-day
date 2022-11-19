@@ -6,7 +6,7 @@ The motivation and purpose behind this project was to fix an already existing sc
 
 ## Usage
 
-Link to deployed app: []()
+Link to [deployed app](https://m-dickerson.github.io/work-day/)
 
 To use the application all you have to do is input text into any field then click the save button to the right.
 
